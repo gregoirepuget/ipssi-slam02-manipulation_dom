@@ -22,3 +22,20 @@ title.classList.toggle('isVisible')
 let foo = 'abc'
 let a = foo.charAt(0) => a
 */
+
+let paragraphs = document.querySelectorAll("p")
+
+for(let i=0; i< paragraphs.length;i++)
+{
+  let color='#'
+  const hexa='0123456789ABCDEF'
+
+  for(let j=0; j<6;j++)
+  {
+    let rand = Math.floor(Math.random()*hexa.length)
+    color += hexa.charAt(rand)
+    console.log(color)
+  }
+
+  paragraphs[i].style.backgroundColor=color
+}
