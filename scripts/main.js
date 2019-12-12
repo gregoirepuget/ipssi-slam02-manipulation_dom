@@ -13,6 +13,13 @@ title.classList.add('red')
 
 title.classList.toggle('isVisible')
 
+title.addEventListener(
+  'click',
+  function(){
+    title.classList.toggle('isVisible')
+  }
+)
+
 
 // Math.random() => genere un nombre aléatoire entre 0 et 1, 1 nnon compris
 
@@ -23,6 +30,9 @@ let foo = 'abc'
 let a = foo.charAt(0) => a
 */
 
+/*
+  Générer des couleurs aléatoires
+*/
 let paragraphs = document.querySelectorAll("p")
 
 for(let i=0; i< paragraphs.length;i++)
@@ -39,3 +49,14 @@ for(let i=0; i< paragraphs.length;i++)
 
   paragraphs[i].style.backgroundColor=color
 }
+
+/*
+    Créer une image dans le DOM
+
+*/
+
+const logo = document.createElement("img")
+logo.setAttribute("src","images/logo.png")
+logo.setAttribute("alt","Logo de mon site")
+const header = document.querySelector("article")
+header.appendChild(logo)

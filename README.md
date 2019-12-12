@@ -9,7 +9,7 @@ Exercice de manipulation du DOM avec JS. 12 décembre 2019
 * Math.random()
 * Math.floor()
 * .charAt()
-
+* Utilisation de AddEventListener()
 
 [Cours JS]: https://cours.36px.fr
 [36 Pixels]: https://www.36pixels.fr
