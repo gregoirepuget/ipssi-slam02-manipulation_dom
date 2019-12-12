@@ -37,6 +37,22 @@ let paragraphs = document.querySelectorAll("p")
 
 for(let i=0; i< paragraphs.length;i++)
 {
+  let color = generateColor()
+  paragraphs[i].style.backgroundColor=color
+
+  paragraphs[i].addEventListener(
+    'click',
+    function(){
+      let color = generateColor()
+      paragraphs[i].style.backgroundColor=color
+    }
+  )
+
+}
+
+
+function generateColor()
+{
   let color='#'
   const hexa='0123456789ABCDEF'
 
@@ -44,12 +60,9 @@ for(let i=0; i< paragraphs.length;i++)
   {
     let rand = Math.floor(Math.random()*hexa.length)
     color += hexa.charAt(rand)
-    console.log(color)
   }
-
-  paragraphs[i].style.backgroundColor=color
+  return color;
 }
-
 /*
     Créer une image dans le DOM
 
